@@ -1,25 +1,83 @@
-#**II.Các chế độ card mạng trong VMWare WorkStation**
-**Switch ảo** (*Virtual Switch*) cũng giống như switch vật lý, một Virtual Switch kết nối các thành phần mạng ảo lại với nhau. Những  switch ảo hay còn gọi là mạng ảo, chúng có tên là VMnet0, VMnet1, VMnet2… một số switch ảo được gắn vào mạng một cách mặc định. (Ta có thể thêm, bớt, chỉnh các option của VMnet bằng cách vào menu Edit -> Virtual Network Editor...).
-Khi ta tạo các VMnet thì trên máy thật của ta sẽ tạo ra những card mạng ảo tương ứng, riêng VMnet0 kết nối trực tiếp với card mạng vật lý nên không tạo ra card VMnet.
+#**III.Cách sử dụng trình soạn thảo vi**
+##**1.Các chế độ trong vi**
+###**a.Khởi động vi bằng lệnh**
+vi<tên file>
+	
+###**b.Chế độ lệnh**
+Dành cho việc biên tập và điều khển.Các lện thường gồm 1 ký tự như là: y,d,j,...
+Nếu muốn thực hiện lệnh n lần, ta đặt n trước lệnh. 
+-Ví dụ :5dw – xóa 5 từ.
+	
+###**c.Chế độ hai chấm (tìm kiếm)**
+Gõ dấu hai chấm ":" từ chế độ lệnh.
+Trong chế độ này, ta có thể thực hiện: tìm kiếm, lưu trữ, thoát hoặc chạy một lệnh của **shell**.
+Gõ phím"Esc" để trở về chế độ lệnh.
+	
+###**d.Chế độ soạn thảo**
+Gõ"i" hoặc"a" từ chế độ lệnh để vào chế độ này. 
+Gõ "Esc" để trở về chế độ lệnh. 
+Dùng chế độ này để soạn thảo văn bản.
+	
+##**2.Các phần tử văn bản(*text items*)**
+Các phần tử như :ký tự,từ, đoạn được định nghĩa trong chế độ lệnh cho phép áp dụng các lệnh soạn thảo lên tài liệu văn bản không cần sử dụng chuột.
+**b/e** :di chuyển về đầu/cuối từ hiện hành.
+**(/)** :di chuyển về đầu/cuối câu hiện hành.
+**{/}** :di chuyển về đầu/cuối đoạn hiện hành.
+**w** :tương tự lệnh b nhưng bao gồm cả các khoảng trắng sau từ.
+**^** :di chuyển về đầu hàng.
+**$** :di chuyển về cuối hàng.
+**1G** :di chuyển về đầu tập tin.
+**G** :di chuyển về cuối tập tin(chú ý G in hoa).
+Có thể sử dụng các phần tử này để thực hiện lệnh, ví dụ như xóa, sao chép,...
 
-**DHCP server ảo DHCP**(*Dynamic Host Configuration*) server ảo cung cấp địa chỉ IP cho các máy ảo trong việc kết nối máy ảo vào các Switch ảo không có tính năng Bridged (VMnet0).
-Nếu bạn muốn bỏ chế độ DHCP của VMnet nào, bạn chỉ cần bỏ dấu check tại Use local DHCP service to distribute IP address to VMs
+##**3.Soạn thảo văn bản**
+**a** :Vào chế độ soạn tahor, con trỏ năm ở ký tự cuối hàng.
+**A** :Vào chế độ soạn thảo, con trỏ nằm ở sau ki tự cuối hàng.
+**i** :Vào chế độ soạn thảo, con trỏ nằm ở vị trí hiện hành.
+**o** :Thêm một hàng mới dưới hàng hiện hành.
+**O** :Thêm một hàng mới trên hảng hiện hành.
+**s** :Xóa ký tự hiện hành và vào chế độ soạn thảo.
+**S** :Xóa dòng hiện hành và vào chế độ soạn thảo.
+	
+##**4.Xóa văn bản**
+Trong chế độ lệnh, gõ **x** để xóa 1 ký tự, **d** để xóa 1 hàng.
+Có thể áp dụng lệnh d với các phần tử văn bản .
+-Ví dụ :
+**dw** :xóa 1 từ.
+**d$** :xóa từ vị trí hiện hành đến cuối hàng.
+**d}** : xóa từ vị trí hiện hành đến cuối đoạn.
+Để xóa 1 phần tử và chuyển sang chế độ soạn thảo, dùng lệnh **c**.
+	
+##**5.Sao chép/dán**
+Trong chế độ lệnh :
+**y** :sao chép(yank)
+**p** :dán(paste)
+Nếu cả một dòng được sao chép và dán thì nó sẽ được đặt dưới dòng có con trỏ.
+Có thể sử dụng với các phần tử văn bản.
+-Ví dụ :
+**y$** :sao chép từ vị trí hiện hành đến cuối hàng.
+**yy** :sao chép cả hàng hiện hành.
+**3yy** :sao chép 3 hàng liên tiếp.
 
-**Card mạng ảo** Khi bạn tạo một máy ảo mới (New Virtual Machine wizard), card mạng ảo được tạo ra cho máy ảo. Những card mạng này hiển thị trên hệ điều hành máy ảo như là AMD PCNET PCI hay Intel Pro/1000 MT Server Adapter. Thêm bớt card mạng bạn nhấn vào nút Add... hoặc Remove... trong Virtual Machine Setting.
-
-**Card mạng trên máy tính ảo**  Khi cài đặt, VMWare tạo ra ở máy thật 2 card mạng ảo.
- VMWare Virtual Ethernet Adapter for VMnet1.
- VMWare Virtual Ethernet Adapter for Vmnet8.
- 2 card mạng này có thể đựơc sử dụng để máy thật giao tiếp với các máy tính ảo.
- Khi “gắn” một card mạng vào một máy ảo, card mạng này có thể được chọn 1 trong 3 loại sau :
-
- - **Bridge :**
-Card Bridge trên máy ảo chỉ có thể giao tiếp với card mạng thật trên máy thật.Nó  có thể giao tiếp với mạng vật lý mà máy tính thật đang kết nối.
-
-- **Host-only :**
-Card Host-only chỉ có thể giao tiếp với card mạng ảo VMnet1 trên máy thật; chỉ có thể giao tiếp với các card Host-only trên các máy ảo khác.
-Card Host-only không thể giao tiếp với mạng vật lý mà máy tính thật đang kết nối.
-
-- **NAT :**
-Card NAT chỉ có thể giao tiếp với card mạng ảo VMnet8 trên máy thật; chỉ có thể giao tiếp với các card NAT trên các máy ảo khác.
-Card NAT không thể giao tiếp với mạng vật lý mà máy tính thật đang kết nối. Tuy nhiên nhờ cơ chế NAT được tích hợp trong VMWare, máy tính ảo có thể gián tiếp liên lạc với mạng vật lý bên ngoài.
+##**6.Tìm kiếm**
+Để tìm kiếm, ta phải chuyển sang chế độ "**hai chấm**"
+"/" để tìm xuôi, "?" để tìm ngược .
+Có thể tìm kiếm, thay thế tương tự như lệnh **sed**. 
+-Ví dụ :
+**/\<comp** :tìm những từ bắt đầu bằng comp.
+**/^z** :tìm những hàng bắt đầu bằng z.
+**:%s/VAR/var** :Thay thế VAR bằng var.
+**:g/XX/s/YY/** :Thay thế XX bằng YY.
+	
+##**7.Lưu trữ & các lệnh khác**
+Từ chế độ lệnh hoặc hai chấm, gõ :
+**:w** :lưu văn bản lại.
+**:w new_file** :Lưu văn bản với tên mới new_file.
+**:w 12,15 extract** : lưu các hàng từ 12 đến 5 vào tập tin extract.
+**:r extract** :đọc tập tin extract vào xem nó tại vị trí con trỏ.
+**:q** :thoát khỏi vi.
+**:q!** :thoát khồng cần hỏi.
+**"wq** :save và thoát.
+**:x** :tương tự :wq
+**u** : hủy bỏ thao tác vừa thực hiện(undo) trong chế độ lệnh.
+	
