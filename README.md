@@ -71,13 +71,10 @@ Có thể tìm kiếm, thay thế tương tự như lệnh **sed**.
 	
 ##**7.Lưu trữ & các lệnh khác**
 Từ chế độ lệnh hoặc hai chấm, gõ :
-**:w** :lưu văn bản lại.
-**:w new_file** :Lưu văn bản với tên mới new_file.
-**:w 12,15 extract** : lưu các hàng từ 12 đến 5 vào tập tin extract.
-**:r extract** :đọc tập tin extract vào xem nó tại vị trí con trỏ.
-**:q** :thoát khỏi vi.\\
-**:q!** :thoát khồng cần hỏi.\\
-**"wq** :save và thoát.
-**:x** :tương tự :wq\\
-**u** : hủy bỏ thao tác vừa thực hiện(undo) trong chế độ lệnh.\\
+    **:w** :lưu văn bản lại.
+    **:w new_file** :Lưu văn bản với tên mới new_file.
+    **:w 12,15 extract** : lưu các hàng từ 12 đến 5 vào tập tin extract.
+    **:r extract** :đọc tập tin extract vào xem nó tại vị trí con trỏ.
+    **:q** :thoát khỏi vi.\\
+
 	
