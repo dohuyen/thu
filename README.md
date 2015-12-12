@@ -11,6 +11,7 @@
 +Tại màn hình Ready to Perform the Requested Operations, bạn nhấn Continue. Sau bước này VMware Workstation sẽ được cài đặt. 
 +Tại màn hình Enter License Key, bạn nhập Key được cấp qua Email khi bạn đăng ký tải VMware Workstation, sau đó nhấn Enter. 
 +Nhấn nút Finish ở màn hình Setup Wizard Complete, sau đó khởi động lại máy để hoàn tất quá trình cài đặt.
+
 ##**2. Tạo máy ảo**
 Sau khi mở phần mềm Vmware (phiên bản Vmware 9), bạn vào File, chọn New Virtual Machine.          
 - Sau đó sẽ xuất hiện 1 hộp thoại: 
