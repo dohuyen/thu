@@ -1,79 +1,38 @@
-#**III.Cách sử dụng trình soạn thảo vi**
-##**1.Các chế độ trong vi**
-
-###**a.Khởi động vi bằng lệnh**
-vi < tên file >
-	
-###**b.Chế độ lệnh**
-- Dành cho việc biên tập và điều khển.Các lện thường gồm 1 ký tự như là: y,d,j,...
-- Nếu muốn thực hiện lệnh n lần, ta đặt n trước lệnh.Ví dụ :5dw – xóa 5 từ.
-	
-###**c.Chế độ hai chấm (tìm kiếm)**
-- Gõ dấu hai chấm ":" từ chế độ lệnh.
-Trong chế độ này, ta có thể thực hiện: tìm kiếm, lưu trữ, thoát hoặc chạy một lệnh của **shell**.
-- Gõ phím"Esc" để trở về chế độ lệnh.
-	
-###**d.Chế độ soạn thảo**
-- Gõ"i" hoặc"a" từ chế độ lệnh để vào chế độ này. 
-- Gõ "Esc" để trở về chế độ lệnh. 
-Dùng chế độ này để soạn thảo văn bản.
-	
-##**2.Các phần tử văn bản(*text items*)**
-Các phần tử như :ký tự,từ, đoạn được định nghĩa trong chế độ lệnh cho phép áp dụng các lệnh soạn thảo lên tài liệu văn bản không cần sử dụng chuột.
-- **b/e** :di chuyển về đầu/cuối từ hiện hành.
-- **(/)** :di chuyển về đầu/cuối câu hiện hành.
-- **{/}** :di chuyển về đầu/cuối đoạn hiện hành.
-- **w**   :tương tự lệnh b nhưng bao gồm cả các khoảng trắng sau từ.
-- **^**   :di chuyển về đầu hàng.
-- **$**   :di chuyển về cuối hàng.
-- **1G**  :di chuyển về đầu tập tin.
-- **G**   :di chuyển về cuối tập tin(chú ý G in hoa).
-- Có thể sử dụng các phần tử này để thực hiện lệnh, ví dụ như xóa, sao chép,...
-
-##**3.Soạn thảo văn bản**
-- **a** :Vào chế độ soạn tahor, con trỏ năm ở ký tự cuối hàng.
-- **A** :Vào chế độ soạn thảo, con trỏ nằm ở sau ki tự cuối hàng.
-- **i** :Vào chế độ soạn thảo, con trỏ nằm ở vị trí hiện hành.
-- **o** :Thêm một hàng mới dưới hàng hiện hành.
-- **O** :Thêm một hàng mới trên hảng hiện hành.
-- **s** :Xóa ký tự hiện hành và vào chế độ soạn thảo.
-- **S** :Xóa dòng hiện hành và vào chế độ soạn thảo.
-	
-##**4.Xóa văn bản**
-- Trong chế độ lệnh, gõ **x** để xóa 1 ký tự, **d** để xóa 1 hàng.
-- Có thể áp dụng lệnh d với các phần tử văn bản .Ví dụ :
-- **dw** :xóa 1 từ.
-- **d$** :xóa từ vị trí hiện hành đến cuối hàng.
-- **d}** : xóa từ vị trí hiện hành đến cuối đoạn.
-- Để xóa 1 phần tử và chuyển sang chế độ soạn thảo, dùng lệnh **c**.
-	
-##**5.Sao chép/dán**
-Trong chế độ lệnh :
-- **y**   :sao chép(yank)
-- **p**   :dán(paste)
-- Nếu cả một dòng được sao chép và dán thì nó sẽ được đặt dưới dòng có con trỏ.
-Có thể sử dụng với các phần tử văn bản.Ví dụ :
-- **y$**  :sao chép từ vị trí hiện hành đến cuối hàng.
-- **yy**  :sao chép cả hàng hiện hành.
-- **3yy** :sao chép 3 hàng liên tiếp.
-
-##**6.Tìm kiếm**
-- Để tìm kiếm, ta phải chuyển sang chế độ "**hai chấm**"
-"/" để tìm xuôi, "?" để tìm ngược .
-Có thể tìm kiếm, thay thế tương tự như lệnh **sed**. Ví dụ :
-- **/\<comp**     :tìm những từ bắt đầu bằng comp.
-- **/^z**         :tìm những hàng bắt đầu bằng z.
-- **:%s/VAR/var** :Thay thế VAR bằng var.
-- **:g/XX/s/YY/** :Thay thế XX bằng YY.
-	
-##**7.Lưu trữ & các lệnh khác**
-Từ chế độ lệnh hoặc hai chấm, gõ :
-- **:w**               :lưu văn bản lại.
-- **:w new_file**      :Lưu văn bản với tên mới new_file.
-- **:w 12,15 extract** : lưu các hàng từ 12 đến 5 vào tập tin extract.
-- **:r extract**       :đọc tập tin extract vào xem nó tại vị trí con trỏ.
-- **:q**               :thoát khỏi vi.
-- **:q!**              :thoát khồng cần hỏi.
-- **"wq**              :save và thoát.
-- **:x**               :tương tự :wq
-- **u**                : hủy bỏ thao tác vừa thực hiện(undo) trong chế độ lệnh.
+#**IV.Một số lệnh cấu hình Network trên Ubuntu**
+##**1.Các câu lệnh kiểm tra thông tin mạng trong Ubuntu**
+LỆNH LINUX	  &  MỤC ĐÍCH / MIÊU TẢ
+ifconfig -a       : Kiểm tra máy có bao nhiêu card mạng
+  grep eth	  
+  ifconfig	  : Xem thông tin cấu hình các card mạng (MAC, địa chỉ IP, gateway..)  của tất cả các card mạng trong máy (tương tự                       lệnh ipconfig của Windows)
+  ifconfig        : Xem thông tin cấu hình của card mạng có tên là card-name (ví dụ: ifconfìg eth0)
+  card-name 
+  route -n	  : Kiểm tra đường đi của gói tin (tương tự lệnh route trong Windows).
+##**2.Các câu lệnh cấu hình mạng trong Ubuntu**
+LỆNH LINUX	                      & MỤC ĐÍCH / MIÊU TẢ
+sudo ifconfig eth0 up             : Enable card mạng eth0 trong Ubuntu
+  sudo ifconfig eth0 down    	    : Disable card mạng eth0 trong Ubuntu
+ ifconfig card IP1 netmask IP2    : Cấu hình mạng cho Ubuntu, ví dụ: để thiết lập IP cho card eth0 IP là 192.168.1.100, netmask là                                        255.255.255.0 thì ta dùng lệnh sau: ifconfig eth0 192.168.1.2 netmask 255.255.255.0
+                                   Lưu ý: Cách cấu hình này sẽ bị mất giá trị khi máy khởi động lại
+ vi /etc/network/interfaces	      : Thiết lập file cấu hình mạng trong Ubuntu
+ /etc/init.d/networking restart   : Khởi động lại card mạng trong Ubuntu (để thay đổi có hiệu lực)
+  vi /etc/resolv	                  Thiết lập name server cho Ubuntu. Ví dụ, nhập vào nội dung file là:
+                                    nameserver 8.8.8.8
+                                    nameserver 8.8.8.4
+ route add default gw 192.168.1.1	: Đặt địa chỉ IP 192.168.1.1 làm default gateway trong Ubuntu. Ngược lại với add ta dùng lệnh delete                                     (ví dụ: route delete default gw 192.168.1.1)
+route add -net 192.168.5.0 mask   : Để add một routing tĩnh đến mạng (cho card mạng eth0). Ngược lại với add ta dùng lệnh delete.
+255.255.255.0 dev eth0            	
+##**3. Các câu lệnh Command Line khác về mạng trong Ubuntu**
+LỆNH LINUX          &	MỤC ĐÍCH / MIÊU TẢ
+ netstat    	      : Hiển thị các kết nối mạng (tương tự trong Windows)
+ traceroute maychu  : Trace gói định tuyến tới máy chủ
+ nslookup	          : Truy vấn máy chủ tên miền
+ rlogin maychu	    : Kết nối với một hệ thống ở xa
+  telnet maychu	    : Kết nối tới một hệ thống ở xa (tương tác tốt hơn lệnh rlogin)
+ rcp taptin maytuxa : Sao chép taptin từ một máy tính maytuxa
+ ftp	              : Truyền tập tin giữa các hệ thống trên một mạng
+ rsh lenh	          : Chạy một lệnh trên một hệ thống ở xa mà không cần đăng nhập
+ ping maychu	      : Kiểm tra kết nối tới một hệ thống ở xa (tương tự trong Windows)
+ lcd path	          : Thay đổi thư mục máy cục bộ khi đã đăng nhập ở trên máy ở xa
+ mesg y/n	          : Đặt tùy chọn để các người dùng khác viết thông điệp cho bạn
+ write user	        : Gửi tin nhắn cho người dùng khác
+ talk user	        : Cho phép 2 người chat với nhau.
