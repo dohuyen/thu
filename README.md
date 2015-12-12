@@ -50,8 +50,8 @@ Có thể áp dụng lệnh d với các phần tử văn bản .
 	
 ##**5.Sao chép/dán**
 Trong chế độ lệnh :
-**y** :sao chép(yank)
-**p** :dán(paste)
+**y** :sao chép(yank)\\
+**p** :dán(paste)\\
 Nếu cả một dòng được sao chép và dán thì nó sẽ được đặt dưới dòng có con trỏ.
 Có thể sử dụng với các phần tử văn bản.
 -Ví dụ :
@@ -75,9 +75,9 @@ Từ chế độ lệnh hoặc hai chấm, gõ :
 **:w new_file** :Lưu văn bản với tên mới new_file.
 **:w 12,15 extract** : lưu các hàng từ 12 đến 5 vào tập tin extract.
 **:r extract** :đọc tập tin extract vào xem nó tại vị trí con trỏ.
-**:q** :thoát khỏi vi.
-**:q!** :thoát khồng cần hỏi.
+**:q** :thoát khỏi vi.\\
+**:q!** :thoát khồng cần hỏi.\\
 **"wq** :save và thoát.
-**:x** :tương tự :wq
-**u** : hủy bỏ thao tác vừa thực hiện(undo) trong chế độ lệnh.
+**:x** :tương tự :wq\\
+**u** : hủy bỏ thao tác vừa thực hiện(undo) trong chế độ lệnh.\\
 	
