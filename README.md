@@ -2,7 +2,7 @@
 ##**1.Các chế độ trong vi**
 
 ###**a.Khởi động vi bằng lệnh**
-vi <tên file>
+vi < tên file >
 	
 ###**b.Chế độ lệnh**
 - Dành cho việc biên tập và điều khển.Các lện thường gồm 1 ký tự như là: y,d,j,...
@@ -23,11 +23,11 @@ Các phần tử như :ký tự,từ, đoạn được định nghĩa trong ch�
 - **b/e** :di chuyển về đầu/cuối từ hiện hành.
 - **(/)** :di chuyển về đầu/cuối câu hiện hành.
 - **{/}** :di chuyển về đầu/cuối đoạn hiện hành.
-- **w** :tương tự lệnh b nhưng bao gồm cả các khoảng trắng sau từ.
-- **^** :di chuyển về đầu hàng.
-- **$** :di chuyển về cuối hàng.
-- **1G** :di chuyển về đầu tập tin.
-- **G** :di chuyển về cuối tập tin(chú ý G in hoa).
+- **w**   :tương tự lệnh b nhưng bao gồm cả các khoảng trắng sau từ.
+- **^**   :di chuyển về đầu hàng.
+- **$**   :di chuyển về cuối hàng.
+- **1G**  :di chuyển về đầu tập tin.
+- **G**   :di chuyển về cuối tập tin(chú ý G in hoa).
 - Có thể sử dụng các phần tử này để thực hiện lệnh, ví dụ như xóa, sao chép,...
 
 ##**3.Soạn thảo văn bản**
@@ -49,31 +49,31 @@ Các phần tử như :ký tự,từ, đoạn được định nghĩa trong ch�
 	
 ##**5.Sao chép/dán**
 Trong chế độ lệnh :
-- **y** :sao chép(yank)
-- **p** :dán(paste)
+- **y**   :sao chép(yank)
+- **p**   :dán(paste)
 - Nếu cả một dòng được sao chép và dán thì nó sẽ được đặt dưới dòng có con trỏ.
 Có thể sử dụng với các phần tử văn bản.Ví dụ :
-- **y$** :sao chép từ vị trí hiện hành đến cuối hàng.
-- **yy** :sao chép cả hàng hiện hành.
+- **y$**  :sao chép từ vị trí hiện hành đến cuối hàng.
+- **yy**  :sao chép cả hàng hiện hành.
 - **3yy** :sao chép 3 hàng liên tiếp.
 
 ##**6.Tìm kiếm**
 - Để tìm kiếm, ta phải chuyển sang chế độ "**hai chấm**"
 "/" để tìm xuôi, "?" để tìm ngược .
 Có thể tìm kiếm, thay thế tương tự như lệnh **sed**. Ví dụ :
-- **/\<comp** :tìm những từ bắt đầu bằng comp.
-- **/^z** :tìm những hàng bắt đầu bằng z.
+- **/\<comp**     :tìm những từ bắt đầu bằng comp.
+- **/^z**         :tìm những hàng bắt đầu bằng z.
 - **:%s/VAR/var** :Thay thế VAR bằng var.
 - **:g/XX/s/YY/** :Thay thế XX bằng YY.
 	
 ##**7.Lưu trữ & các lệnh khác**
 Từ chế độ lệnh hoặc hai chấm, gõ :
-- **:w** :lưu văn bản lại.
-- **:w new_file** :Lưu văn bản với tên mới new_file.
+- **:w**               :lưu văn bản lại.
+- **:w new_file**      :Lưu văn bản với tên mới new_file.
 - **:w 12,15 extract** : lưu các hàng từ 12 đến 5 vào tập tin extract.
-- **:r extract** :đọc tập tin extract vào xem nó tại vị trí con trỏ.
-- **:q** :thoát khỏi vi.
-- **:q!** :thoát khồng cần hỏi.
-- **"wq** :save và thoát.
-- **:x** :tương tự :wq
-- **u** : hủy bỏ thao tác vừa thực hiện(undo) trong chế độ lệnh.
+- **:r extract**       :đọc tập tin extract vào xem nó tại vị trí con trỏ.
+- **:q**               :thoát khỏi vi.
+- **:q!**              :thoát khồng cần hỏi.
+- **"wq**              :save và thoát.
+- **:x**               :tương tự :wq
+- **u**                : hủy bỏ thao tác vừa thực hiện(undo) trong chế độ lệnh.
