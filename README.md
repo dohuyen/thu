@@ -65,8 +65,8 @@ $ chmod 744 main.c # main.c sẽ có thuộc tính là: -rwxr--r--
 
 - Để thay đổi owner cho đối tượng sử dụng lệnh chown (bạn phải có quyền root): $ chown User_Name File_Name
 +  Để thay đổi group cho đối tượng sử dụng lệnh chgrp nhưng phải thỏa một trong hai điều kiện sau:
- - 1.	Bạn sử dụng quyền root
- - 2.	Bạn là chủ sở hữu và thuộc Group (có tên là Group_Name trong lệnh) mà bạn muốn thay đổi Group cho file: $ chgrp Group_Name File_Name .
+ - 1.Bạn sử dụng quyền root
+ - 2.Bạn là chủ sở hữu và thuộc Group (có tên là Group_Name trong lệnh) mà bạn muốn thay đổi Group cho file: $ chgrp Group_Name File_Name .
 
  + Để biết mình thuộc các nhóm nào, bạn sử dụng lệnh 'id'. Lệnh này cho biết id cùng với tên của bạn và các nhóm mà bạn tham gia.
 Các thuộc tính khác của tệp tin liên quan đến quyền truy cập rất đáng chú ý khác nữa là: Set user ID, set group ID, sticky bit. Các bít này bổ xung thêm cho các quyền đã mô tả ở trên. Sau đây là mô tả chi tiết ba bít này:
