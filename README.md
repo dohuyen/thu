@@ -1,9 +1,10 @@
 
 
 + Một gói tin TCP bao gồm 2 phần :
- - header
- - dữ liệu
-Phần header có 11 trường trong đó 10 trường bắt buộc. Trường thứ 11 là tùy chọn (trong bảng minh họa có màu nền đỏ) có tên là: **Options**
+ - **header**
+ - **dữ liệu**
+
+- *lưu ý* : Phần header có 11 trường trong đó 10 trường bắt buộc. Trường thứ 11 là tùy chọn (trong bảng minh họa có màu nền đỏ) có tên là: **Options**
 
 ##**Header**
 - Source port : Số hiệu của cổng tại máy tính gửi.
