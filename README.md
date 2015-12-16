@@ -13,14 +13,14 @@
 **Các quyền cho mỗi đối tượng được biểu diễn theo hai cách**
 
 **Cách thứ nhất** là biểu diễn bằng một chuỗi gồm 10 ký tự:
-- 	Ký tự đầu thể hiện loại file:
-- : Tệp tin thông thường
-d : Thư mục
-l : Liên kết
-c : Special file
-s : Socket
-p : Named pipe
-b : Thiết bị
++	Ký tự đầu thể hiện loại file:
++ Tệp tin thông thường
+ - d : Thư mục
+ - l : Liên kết
+ - c : Special file
+ - s : Socket
+ - p : Named pipe
+ - b : Thiết bị
 -	Ba ký tự tiếp là các quyền cho owner.
 -	Kế đến là ba ký tự biểu diễn các quyền cho group.
 -	Còn lại ba ký tự cuối dành cho other.
@@ -50,16 +50,16 @@ $ ls -l
 - Để thay đổi quyền hạn truy cập cho các user sử dụng lệnh **chmod** (bạn phải là owner của file hoặc có quyền root)
 $ chmod 744 main.c # main.c sẽ có thuộc tính là: -rwxr--r--
 
- + Có một cách khác là sử dụng chmod bằng cách sử dụng ký tự đại diện. Các ký tự đại diện cho nhóm là:
--	u : user sở hữu file
--	g : group của user trên
--	o : others
--	a : tất cả ba ký hiệu ở trên
++ Có một cách khác là sử dụng chmod bằng cách sử dụng ký tự đại diện. Các ký tự đại diện cho nhóm là:
+ -	u : user sở hữu file
+ -	g : group của user trên
+ -	o : others
+ -	a : tất cả ba ký hiệu ở trên
 
- + Các toán tử:
--	+ : thêm quyền
--	- : bớt quyền
--	= : gán quyền
++ Các toán tử:
+ -	+ : thêm quyền
+ -	- : bớt quyền
+ -	= : gán quyền
 
 
 
