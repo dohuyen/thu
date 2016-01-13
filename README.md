@@ -20,13 +20,14 @@
 - Trang tìm kiếm và bản liệt kê tương ứng có thể được chỉnh bằng việc sử dụng các tệp mẫu template đơn giản.
 - Các nguyên âm biến âm sắc trong chuỗi tìm kiếm được hỗ trợ
 - Robot hỗ trợ chuẩn cho việc "Loại trừ Robot" và "Xác thực WWW cơ bản" cho việc đánh chỉ số các nội dung được bảo vệ.
+
 ##**3. Cài đặt Apache**
 – Update Ubuntu server: sudo apt-get update
 – Cài đặt Apache với câu lệnh: sudo apt-get install apache2
 - Nó có hỏi Y/N thì cứ ấn Y rồi Enter.
 - Sau khi cài đặt, hãy thử trên trình duyệt: http://localhost
 
-
+![Cài đặt thành công Apache](https://assets.digitalocean.com/articles/lamp_1404/default_apache.png.png)
 
 Sử dụng những lệnh sau để khởi động, kích hoạt và ngừng hoạt động của Apache:
  + sudo /etc/init.d/apache2 start #start apache
