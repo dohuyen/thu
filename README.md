@@ -8,35 +8,35 @@
 - Biên dịch phần mềm làm giảm thiểu rủi ro một cách tối ưu nhất có thể cho hệ thống phát sinh từ những thành phần hay module trong phần mềm. Bạn có thể tùy chỉnh cài đặt những thành phần nào vào hệ thống ở bước đầu tiên.
 - Ngoài ra, sử dụng phương pháp này bạn có thể tối ưu hóa tài nguyên hệ thống . Đối với kiến thức trong tương lai, biên dịch có thể cho bạn những kiến thức cơ bản đầu tiên về biên dịch kernel trên Linux và đích cuối cùng chính là tự mình biên dịch một distro linux cho riêng mình.
 
-###*Bên dịch phần mềm httpd:*
-- Bước 1: Tải httpd-2.4.10.tar.bz2
+###**Bên dịch phần mềm httpd:**
+- *Bước 1:* Tải httpd-2.4.10.tar.bz2
  
-- Bước 2: Giải nén tập tin
+- *Bước 2:* Giải nén tập tin
  + #unzip                  để giải nén                       name_package.zip
  + #tar -xvzf              để giải nén                       name_package.tar.gz
  + #tar -jvxf              để giải nén                       name_package.tar.bz2
  + #tar -x                 để giải nén                       name_package.tgz
  
-- Bước 3: Tạo thư mục để cài phần mềm
+- *Bước 3:* Tạo thư mục để cài phần mềm
  + Tạo thư mục httpd trong thư mục /usr/local/
  + Sử dụng lệnh #ll để kiểm tra thư mục vừa tạo
  
-- Bước 4: Vào thư mục vừa giải nén để chuẩn bị biên dịch
+- *Bước 4:* Vào thư mục vừa giải nén để chuẩn bị biên dịch
  + [root@localhost ~]# cd httpd-2.4.10
 - Đọc file README hoặc INSTALL để xem hướng dẫn cài đặt.
  + [root@localhost httpd-2.4.10]# vi README
  + [root@localhost httpd-2.4.10]# vi INSTALL
 
-- Bước 5: Cấu hình cho gói phần mềm (Bước này xảy ra lỗi nhiều nhất)
+- *Bước 5:* Cấu hình cho gói phần mềm (Bước này xảy ra lỗi nhiều nhất)
  + [root@localhost httpd-2.4.10]# ./configure –prefix=/usr/local/httpd/ –with-included-apr
  + #–prefix là nơi sẽ cài phần mềm vào giống như chọn đường dẫn để cài phần mềm trong windows.
  + #–with-included-apr: trong tập tin INSTALL có hướng dẫn là tải apr và apr-util rồi copy vào /httpd-2.4.10/srclib/
  
-- Bước 6: Biên dịch cho gói phần mềm:
+- *Bước 6:* Biên dịch cho gói phần mềm:
  + #make
  + [root@localhost httpd-2.4.10]# make
 
-- Bước 7: Cài đặt gói phần mềm httpd vừa biên dịch:
+- *Bước 7:* Cài đặt gói phần mềm httpd vừa biên dịch:
  + #make install
  + [root@localhost httpd-2.4.10]# make install
 - Khởi động dịch vụ httpd:
