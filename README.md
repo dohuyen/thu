@@ -2,10 +2,12 @@
 ![Cấu trúc gói tin TCP](https://2466b9f4-a-62cb3a1a-s-sites.googlegroups.com/site/lexuandin/home/hhhhhhh.png?attachauth=ANoY7cqUORJMnJlfmq_UOidhurrNimAD3KNDazIfpijXXODeXsf2cAvAPgJ926IO_OiD8yAdRbFg5ApnJGHppQIIjCnTLLBD5-VzNcLNe7Q6KXpbdqWGwrhnScZbekZuj5x1cEdFSUlT_Eghpm3t425DNgimsuUxRHMyQMY_iVbYjfDIdDIuTQWZG4HDfu9sgxY1bq32FBeJ8dL1tI6IpgV8HShLrSSjxw%3D%3D&attredirects=0.png)
 
 #**I.Cách cài đặt phần mềm trên các distro khác nhau :**
- ##**Biên dịch phần mềm**
+
+##**Biên dịch phần mềm**
 - Phương pháp này không phụ thuộc bạn dùng distro nào miễn là dùng Linux là điều có thể dùng phương pháp này. Bước đầu tiên khi muốn thực hiện phương pháp cài đặt này là bạn phải có file source của nó(có định dạng thường là file nén tag.gz. tar.bz2,..). Sau khi down file source về bạn tiến hành giải nén nó ra, sau đó vào trong thư mục giải nén thực hiện quá trình đầu tiên là check thư viện và các config file. biên dịch phần mềm cần phải đầy đủ thư viện thì mới có thể biên dịch được. Nó không thể tự động tìm các gói phụ thuộc để cài đặt . 
 - Biên dịch phần mềm làm giảm thiểu rủi ro một cách tối ưu nhất có thể cho hệ thống phát sinh từ những thành phần hay module trong phần mềm. Bạn có thể tùy chỉnh cài đặt những thành phần nào vào hệ thống ở bước đầu tiên.
 - Ngoài ra, sử dụng phương pháp này bạn có thể tối ưu hóa tài nguyên hệ thống . Đối với kiến thức trong tương lai, biên dịch có thể cho bạn những kiến thức cơ bản đầu tiên về biên dịch kernel trên Linux và đích cuối cùng chính là tự mình biên dịch một distro linux cho riêng mình.
+
 ###*Bên dịch phần mềm httpd:*
 - Bước 1: Tải httpd-2.4.10.tar.bz2
  
