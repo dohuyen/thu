@@ -41,9 +41,9 @@
  + [root@localhost httpd-2.4.10]# make install
 - Khởi động dịch vụ httpd:
  + [root@localhost ~]# /usr/local/httpd/bin/apachectl start
-+ Xong các bước trên các bạn cài phần mềm w3m để lướt web trên giao diện dòng lệnh:
-+ [root@localhost ~]# yum install w3m 
-+ [root@localhost ~]# w3m localhost
+- Xong các bước trên các bạn cài phần mềm w3m để lướt web trên giao diện dòng lệnh:
+ + [root@localhost ~]# yum install w3m 
+ + [root@localhost ~]# w3m localhost
 
 
 
