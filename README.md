@@ -1,7 +1,7 @@
 
 ![Cấu trúc gói tin TCP](https://2466b9f4-a-62cb3a1a-s-sites.googlegroups.com/site/lexuandin/home/hhhhhhh.png?attachauth=ANoY7cqUORJMnJlfmq_UOidhurrNimAD3KNDazIfpijXXODeXsf2cAvAPgJ926IO_OiD8yAdRbFg5ApnJGHppQIIjCnTLLBD5-VzNcLNe7Q6KXpbdqWGwrhnScZbekZuj5x1cEdFSUlT_Eghpm3t425DNgimsuUxRHMyQMY_iVbYjfDIdDIuTQWZG4HDfu9sgxY1bq32FBeJ8dL1tI6IpgV8HShLrSSjxw%3D%3D&attredirects=0.png)
 
-#**I.Cách cài đặt phần mềm trên các distro khác nhau :**
+#**I.Cách cài đặt phần mềm trên các distro khác nhau **
 
 ##**Biên dịch phần mềm**
 - Phương pháp này không phụ thuộc bạn dùng distro nào miễn là dùng Linux là điều có thể dùng phương pháp này. Bước đầu tiên khi muốn thực hiện phương pháp cài đặt này là bạn phải có file source của nó(có định dạng thường là file nén tag.gz. tar.bz2,..). Sau khi down file source về bạn tiến hành giải nén nó ra, sau đó vào trong thư mục giải nén thực hiện quá trình đầu tiên là check thư viện và các config file. biên dịch phần mềm cần phải đầy đủ thư viện thì mới có thể biên dịch được. Nó không thể tự động tìm các gói phụ thuộc để cài đặt . 
@@ -12,10 +12,10 @@
 - Bước 1: Tải httpd-2.4.10.tar.bz2
  
 - Bước 2: Giải nén tập tin
-+ #unzip                  để giải nén                       name_package.zip
-+ #tar -xvzf              để giải nén                       name_package.tar.gz
-+ #tar -jvxf              để giải nén                       name_package.tar.bz2
-+ #tar -x                 để giải nén                       name_package.tgz
+ + #unzip                  để giải nén                       name_package.zip
+ + #tar -xvzf              để giải nén                       name_package.tar.gz
+ + #tar -jvxf              để giải nén                       name_package.tar.bz2
+ + #tar -x                 để giải nén                       name_package.tgz
  
 - Bước 3: Tạo thư mục để cài phần mềm
 + Tạo thư mục httpd trong thư mục /usr/local/
