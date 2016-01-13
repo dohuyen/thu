@@ -23,8 +23,8 @@
 - Robot hỗ trợ chuẩn cho việc "Loại trừ Robot" và "Xác thực WWW cơ bản" cho việc đánh chỉ số các nội dung được bảo vệ.
 
 ##**3. Cài đặt Apache**
-- Update Ubuntu server: sudo apt-get update
-- Cài đặt Apache với câu lệnh: sudo apt-get install apache2
+- Update Ubuntu server: *sudo apt-get update*
+- Cài đặt Apache với câu lệnh: *sudo apt-get install apache2*
 - Nó có hỏi Y/N thì cứ ấn Y rồi Enter.
 - Sau khi cài đặt, hãy thử trên trình duyệt: http://localhost
 
@@ -32,26 +32,26 @@
 ![Cài đặt thành công Apache](https://assets.digitalocean.com/articles/lamp_1404/default_apache.png)
 
 
-Sử dụng những lệnh sau để khởi động, kích hoạt và ngừng hoạt động của Apache:
- + sudo /etc/init.d/apache2 start #start apache
- + sudo /etc/init.d/apache2 stop #stop apache
- + sudo /etc/init.d/apache2 restart #restart apache
+- Sử dụng những lệnh sau để khởi động, kích hoạt và ngừng hoạt động của Apache:
+ + *sudo /etc/init.d/apache2 start #start apache*
+ + *sudo /etc/init.d/apache2 stop #stop apache*
+ + *sudo /etc/init.d/apache2 restart #restart apache*
 
-- Không muốn Apache tự khởi động cùng hệ thống, gõ lệnh sau: sudo update-rc.d -f apache2 remove
-- Muốn Apache tự khởi động cùng hệ thống, gõ lệnh sau: sudo update-rc.d apache2 defaults
+- Muốn Apache tự khởi động cùng hệ thống, gõ lệnh sau: *sudo update-rc.d apache2 defaults*
+- Không muốn Apache tự khởi động cùng hệ thống, gõ lệnh sau: *sudo update-rc.d -f apache2 remove*
 
 ###**3.1) Cấu trúc thư mục cấu hình Apache trên Ubuntu**
 - Mặc định trên Ubuntu, thư mục chứa các thiết lập của Apache sẽ nằm trong thư mục /etc/apache2. Trong thư mục đó, nó có một số thư mục và file cấu hình như sau:
-	conf-available/ – Thư mục này sẽ chứa các file thiết lập cấu hình sẵn của Apache trên Ubuntu, nhưng các thiết lập trong đây sẽ chưa được áp dụng vì Ubuntu không load thiết lập cấu hình trong thư mục này.
--	conf-enabled/ – Thư mục chứa các file thiết lập cấu hình của Apache trên Ubuntu đang được bật. Hãy hiểu là nếu thư mục này có một liên kết tượng trưng (symlink) qua một file module nào đó bên thư mục conf-available thì nó sẽ được bật.
--	mods-available/ – Thư mục chứa các file từng module của Apache trên Ubuntu nhưng chưa được bật.
--	mods-enabled/ – Thư mục chứa các file từng module của Apache trên Ubuntu đang được bật.
--	site-available/ – Thư mục chứa file cấu hình VirtualHost của Apache trên Ubuntu nhưng chưa được bật.
--	site-enabled/ – Thư mục chứa file cấu hình VirtualHost của Apache trên Ubuntu đang được bật.
--	apache2.conf – File cấu hình Apache trên Ubuntu.
--	envvars – File thiết lập các biến với giá trị sẵn để sử dụng trong các file cấu hình.
--	magic – File thiết lập của module mod_mime_magic trên Apache.
--	ports.conf – File cấu hình cổng mạng của Apache (mặc định là port 80).
+- *conf-available/* – Thư mục này sẽ chứa các file thiết lập cấu hình sẵn của Apache trên Ubuntu, nhưng các thiết lập trong đây sẽ chưa được áp dụng vì Ubuntu không load thiết lập cấu hình trong thư mục này.
+- *conf-enabled/* – Thư mục chứa các file thiết lập cấu hình của Apache trên Ubuntu đang được bật. Hãy hiểu là nếu thư mục này có một liên kết tượng trưng (symlink) qua một file module nào đó bên thư mục conf-available thì nó sẽ được bật.
+- *mods-available/* – Thư mục chứa các file từng module của Apache trên Ubuntu nhưng chưa được bật.
+- *mods-enabled/* – Thư mục chứa các file từng module của Apache trên Ubuntu đang được bật.
+- *site-available/* – Thư mục chứa file cấu hình VirtualHost của Apache trên Ubuntu nhưng chưa được bật.
+- *site-enabled/* – Thư mục chứa file cấu hình VirtualHost của Apache trên Ubuntu đang được bật.
+- *apache2.conf* – File cấu hình Apache trên Ubuntu.
+- *envvars* – File thiết lập các biến với giá trị sẵn để sử dụng trong các file cấu hình.
+- *magic* – File thiết lập của module mod_mime_magic trên Apache.
+- *ports.conf* – File cấu hình cổng mạng của Apache (mặc định là port 80).
 
 ###**3.2: Thư mục gốc chứa dữ liệu website của Apache trên Ubuntu**
 - Mặc định, Apache trên Ubuntu sẽ sử dụng thư mục /var/www/html để chứa dữ liệu website gốc (load bằng IP hoặc hostname). Khi bạn vào đây sẽ thấy một file index.html, đó chính là file giao diện chào mừng mà bạn đã thấy ở trên.
@@ -63,20 +63,20 @@ Sử dụng những lệnh sau để khởi động, kích hoạt và ngừng ho
 - eth0:0 first NIC alias: 192.168.1.6
 
  + Set eth0:0 bằng dòng lệnh với quyền user root
-- Lệnh : # ifconfig eth0:0 192.168.1.6 up
+- Lệnh : *# ifconfig eth0:0 192.168.1.6 up*
 
 - Lệnh: 
- + # vi /etc/network/interfaces
- + auto eth0:1
- + iface eth0:1 inet static
- + name Ethernet alias LAN card
- + address 192.168.1.6
- + netmask 255.255.255.0
- + broadcast 192.168.1.255
- + network 192.168.1.0
+ + *# vi /etc/network/interfaces*
+ + *auto eth0:1*
+ + *iface eth0:1 inet static*
+ + *name Ethernet alias LAN card*
+ + *address 192.168.1.6*
+ + *netmask 255.255.255.0*
+ + *broadcast 192.168.1.255*
+ + *network 192.168.1.0*
 
 - Lưu lại và đóng lại file, sau đó restart lại network
- + Lệnh: # /etc/init.d/networking restart
+ + Lệnh: *# /etc/init.d/networking restart*
 
 
 
