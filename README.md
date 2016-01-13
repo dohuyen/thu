@@ -30,6 +30,7 @@
 
 ![Cài đặt thành công Apache](https://assets.digitalocean.com/articles/lamp_1404/default_apache.png)
 
+
 Sử dụng những lệnh sau để khởi động, kích hoạt và ngừng hoạt động của Apache:
  + sudo /etc/init.d/apache2 start #start apache
  + sudo /etc/init.d/apache2 stop #stop apache
