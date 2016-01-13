@@ -3,6 +3,7 @@
 
 #**III.Tìm hiểu và cài đặt Apache làm Webserver**
 - Web Server là máy chủ có dung lượng lớn, tốc độ cao, được dùng để lưu trữ thông tin như một ngân hàng dữ liệu, chứa những website đã được thiết kế cùng với những thông tin liên quan khác. (các mã Script, các chương trình, và các file Multimedia).
+
 ##**1.Apache là một phần mềm có nhiều tính năng mạnh và linh hoạt dùng để làm Web Server.**
 - Hỗ trợ đầy đủ những giao thức HTTP trước đây như HTTP/1.1
 - Có thể cấu hình và mở rộng với những module của công ty thứ ba.
@@ -27,7 +28,7 @@
 - Nó có hỏi Y/N thì cứ ấn Y rồi Enter.
 - Sau khi cài đặt, hãy thử trên trình duyệt: http://localhost
 
-![Cài đặt thành công Apache](https://assets.digitalocean.com/articles/lamp_1404/default_apache.png.png)
+![Cài đặt thành công Apache](https://assets.digitalocean.com/articles/lamp_1404/default_apache.png)
 
 Sử dụng những lệnh sau để khởi động, kích hoạt và ngừng hoạt động của Apache:
  + sudo /etc/init.d/apache2 start #start apache
